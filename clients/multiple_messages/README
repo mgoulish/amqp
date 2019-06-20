@@ -1,0 +1,33 @@
+
+To run this example,
+just do this:
+
+
+In Window 0 :
+
+  Start a dispatch router, listening on the standard AMQP port 5672.
+
+
+
+
+In Window 1 :
+
+  go run ./multiple_recv.go
+
+
+
+In Window 2 :
+
+  go run ./multiple_send.go
+
+
+
+
+After 3 or 4 seconds, you should see numbers start printing out in the recv window, indicating how many messages have been received.
+
+
+
+At the end the sender and receiver will print out the start time and the end time for the test -- in microseconds -- and you can use that to calculate throughput.
+
+
+
